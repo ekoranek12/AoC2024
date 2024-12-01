@@ -70,13 +70,24 @@ func calculateDifference(_ input: ListPair) -> Int {
         }
 }
 
+func countElements(_ input: [Int]) -> [Int: Int] {
+    var counter: [Int: Int] = [:]
+
+    for value in input {
+        let count = counter[value] ?? 0
+        counter[value] = count + 1
+    }
+
+    return counter
+}
+
 func calculateSimilarity(_ input: ListPair) -> Int {
     var score = 0
 
+    let counts = countElements(input.rhs)
+
     for value in input.lhs {
-        let count = input.rhs.count { compareValue in
-            value == compareValue
-        }
+        let count = counts[value] ?? 0
 
         score += (value * count)
     }
@@ -88,4 +99,8 @@ let value = try! loadInputs()
 let pairs = parse(value)
 let sortedPairs = sort(pairs)
 //let difference = calculateDifference(sortedPairs)
-let similarity = calculateSimilarity(sortedPairs)
+
+let similarity = measureDuration("Similarity") {
+    calculateSimilarity(sortedPairs)
+}
+// 25,574,739, 3.831035137176514 → 0.02319812774658203
