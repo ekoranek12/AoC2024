@@ -13,6 +13,6 @@ public func measureDuration<Output>(_ title: String, function: () -> Output) -> 
     let output = function()
     let end = Date.now.timeIntervalSince1970
 
-    print("Function \(title) took: \(end - start) seconds")
+    print("Function \"\(title)\" took: \(end - start) seconds")
     return output
 }
