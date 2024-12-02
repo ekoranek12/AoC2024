@@ -16,7 +16,7 @@ struct Day1Tests {
         9   8
         3   4
         """
-
+    
     @Test func load() async throws {
         let value = try Day1.load()
         let split = value.split(separator: "\n")
@@ -25,6 +25,20 @@ struct Day1Tests {
 
     @Test func parseRawString() async throws {
         let parsed = Day1.parse(rawValues)
+
+        #expect(parsed.lhs.count == 5)
+        #expect(parsed.rhs.count == 5)
+
+        let lhs = [7, 1, 5, 9, 3]
+        #expect(parsed.lhs == lhs)
+
+        let rhs = [10, 6, 2, 8, 4]
+        #expect(parsed.rhs == rhs)
+    }
+
+    @Test func parseRawStringWithParsing() async throws {
+        // Second parsing approach using Swift Parsing
+        let parsed = Day1.parse2(rawValues)
 
         #expect(parsed.lhs.count == 5)
         #expect(parsed.rhs.count == 5)
@@ -65,6 +79,7 @@ struct Day1Tests {
             5   1
             9   1
             3   4
+            
             """
 
         let parsed = Day1.parse(rawValues)
@@ -85,6 +100,7 @@ struct Day1Tests {
             5   1
             9   1
             3   4
+            
             """
 
         let parsed = Day1.parse(rawValues)

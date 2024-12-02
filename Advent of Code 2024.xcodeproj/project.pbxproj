@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		8791296D2CFD4F5000C9D77F /* Parsing in Frameworks */ = {isa = PBXBuildFile; productRef = 8791296C2CFD4F5000C9D77F /* Parsing */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		87F91EFF2CFCA0DB00DF1026 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8791296D2CFD4F5000C9D77F /* Parsing in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +117,7 @@
 			);
 			name = "Advent of Code 2024";
 			packageProductDependencies = (
+				8791296C2CFD4F5000C9D77F /* Parsing */,
 			);
 			productName = "Advent of Code 2024";
 			productReference = 87F91EED2CFCA0D800DF1026 /* Advent of Code 2024.app */;
@@ -195,6 +201,9 @@
 			);
 			mainGroup = 87F91EE42CFCA0D800DF1026;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				8791296B2CFD4F5000C9D77F /* XCRemoteSwiftPackageReference "swift-parsing" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 87F91EEE2CFCA0D800DF1026 /* Products */;
 			projectDirPath = "";
@@ -591,6 +600,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8791296B2CFD4F5000C9D77F /* XCRemoteSwiftPackageReference "swift-parsing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-parsing";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.13.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8791296C2CFD4F5000C9D77F /* Parsing */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8791296B2CFD4F5000C9D77F /* XCRemoteSwiftPackageReference "swift-parsing" */;
+			productName = Parsing;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 87F91EE52CFCA0D800DF1026 /* Project object */;
 }
