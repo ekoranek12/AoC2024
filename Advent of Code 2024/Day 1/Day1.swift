@@ -52,15 +52,10 @@ public enum Day1 {
     }
 
     public static func countElements(_ input: [Int]) -> [Int: Int] {
-        // Speeds calculateSimilarity up from 3.831035137176514 → 0.0003800392150878906
-        var counter: [Int: Int] = [:]
-
-        for value in input {
-            let count = counter[value] ?? 0
-            counter[value] = count + 1
-        }
-
-        return counter
+        Dictionary(
+            input.map { ($0, 1) },
+            uniquingKeysWith: +
+        )
     }
 
     public static func calculateSimilarity(_ input: ListPair) -> Int {
@@ -69,8 +64,7 @@ public enum Day1 {
         let counts = countElements(input.rhs)
 
         for value in input.lhs {
-            let count = counts[value] ?? 0
-
+            let count = counts[value, default: 0]
             score += (value * count)
         }
 
