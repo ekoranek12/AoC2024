@@ -38,7 +38,7 @@ struct Day1Tests {
 
     @Test func parseRawStringWithParsing() async throws {
         // Second parsing approach using Swift Parsing
-        let parsed = Day1.parse2(rawValues)
+        let parsed = Day1.parse(rawValues)
 
         #expect(parsed.lhs.count == 5)
         #expect(parsed.rhs.count == 5)

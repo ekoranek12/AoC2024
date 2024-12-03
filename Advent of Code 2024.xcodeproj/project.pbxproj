@@ -6,10 +6,6 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		8791296D2CFD4F5000C9D77F /* Parsing in Frameworks */ = {isa = PBXBuildFile; productRef = 8791296C2CFD4F5000C9D77F /* Parsing */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXContainerItemProxy section */
 		87F91EFF2CFCA0DB00DF1026 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -33,9 +29,22 @@
 		87F91F082CFCA0DB00DF1026 /* Advent of Code 2024UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Advent of Code 2024UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		875FC7332CFDE37200D596AF /* Exceptions for "Advent of Code 2024" folder in "Compile Sources" phase from "Advent of Code 2024" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = 87F91EE92CFCA0D800DF1026 /* Sources */;
+			membershipExceptions = (
+				"Day 2/Day2PuzzleInput.txt",
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		87F91EEF2CFCA0D800DF1026 /* Advent of Code 2024 */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				875FC7332CFDE37200D596AF /* Exceptions for "Advent of Code 2024" folder in "Compile Sources" phase from "Advent of Code 2024" target */,
+			);
 			path = "Advent of Code 2024";
 			sourceTree = "<group>";
 		};
@@ -56,7 +65,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8791296D2CFD4F5000C9D77F /* Parsing in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,7 +125,6 @@
 			);
 			name = "Advent of Code 2024";
 			packageProductDependencies = (
-				8791296C2CFD4F5000C9D77F /* Parsing */,
 			);
 			productName = "Advent of Code 2024";
 			productReference = 87F91EED2CFCA0D800DF1026 /* Advent of Code 2024.app */;
@@ -177,7 +184,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1600;
-				LastUpgradeCheck = 1600;
+				LastUpgradeCheck = 1610;
 				TargetAttributes = {
 					87F91EEC2CFCA0D800DF1026 = {
 						CreatedOnToolsVersion = 16.0;
@@ -202,7 +209,6 @@
 			mainGroup = 87F91EE42CFCA0D800DF1026;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				8791296B2CFD4F5000C9D77F /* XCRemoteSwiftPackageReference "swift-parsing" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 87F91EEE2CFCA0D800DF1026 /* Products */;
@@ -312,6 +318,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -373,6 +380,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -400,6 +408,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Advent of Code 2024/Advent_of_Code_2024.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Advent of Code 2024/Preview Content\"";
 				DEVELOPMENT_TEAM = 7M4W2Y3X7H;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -423,10 +432,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.eddiekoranek.Advent-of-Code-2024";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				XROS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
@@ -439,6 +449,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Advent of Code 2024/Advent_of_Code_2024.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Advent of Code 2024/Preview Content\"";
 				DEVELOPMENT_TEAM = 7M4W2Y3X7H;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -462,10 +473,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.eddiekoranek.Advent-of-Code-2024";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				XROS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
@@ -476,6 +488,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 7M4W2Y3X7H;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
@@ -499,6 +512,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 7M4W2Y3X7H;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
@@ -521,6 +535,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 7M4W2Y3X7H;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
@@ -543,6 +558,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 7M4W2Y3X7H;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
@@ -600,25 +616,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		8791296B2CFD4F5000C9D77F /* XCRemoteSwiftPackageReference "swift-parsing" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/pointfreeco/swift-parsing";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.13.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		8791296C2CFD4F5000C9D77F /* Parsing */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8791296B2CFD4F5000C9D77F /* XCRemoteSwiftPackageReference "swift-parsing" */;
-			productName = Parsing;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 87F91EE52CFCA0D800DF1026 /* Project object */;
 }

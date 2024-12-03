@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import Parsing
+//import Parsing
 
 public struct Pair {
     var lhs: [Int]
@@ -50,28 +50,28 @@ public enum Day1 {
     }
 
     // Resolving using Swift Parsing
-    public static func parse2(_ input: String) -> Pair {
-        let parser = Parse(input: Substring.self) {
-            Many {
-                Digits()
-                "   "
-                Digits()
-            } separator: {
-                "\n"
-            }
-        }
-
-        do {
-            return try parser.parse(input.trimmingCharacters(in: .whitespacesAndNewlines))
-                .reduce(into: Pair()) { partialResult, pair in
-                    partialResult.lhs.append(pair.0)
-                    partialResult.rhs.append(pair.1)
-                }
-        } catch {
-            print(error)
-            fatalError()
-        }
-    }
+//    public static func parse2(_ input: String) -> Pair {
+//        let parser = Parse(input: Substring.self) {
+//            Many {
+//                Digits()
+//                "   "
+//                Digits()
+//            } separator: {
+//                "\n"
+//            }
+//        }
+//
+//        do {
+//            return try parser.parse(input.trimmingCharacters(in: .whitespacesAndNewlines))
+//                .reduce(into: Pair()) { partialResult, pair in
+//                    partialResult.lhs.append(pair.0)
+//                    partialResult.rhs.append(pair.1)
+//                }
+//        } catch {
+//            print(error)
+//            fatalError()
+//        }
+//    }
 
     public static func sort(_ input: Pair) -> Pair {
         Pair(
