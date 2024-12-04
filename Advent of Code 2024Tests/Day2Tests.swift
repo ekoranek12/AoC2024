@@ -75,10 +75,4 @@ struct Day2Tests {
         try Day2.dampenedCheck(reports[4])
         try Day2.dampenedCheck(reports[5])
     }
-
-    @Test func checkCustomReport() async throws {
-        let report = Day2.Report(levels: [78, 81, 78, 80, 81, 83, 85, 83])
-
-        print(try Day2.dampenedCheck(report))
-    }
 }
