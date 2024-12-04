@@ -13,10 +13,14 @@ public enum Day3 {
         "mul("
         Capture {
             OneOrMore(.digit)
+        } transform: {
+            Int($0)
         }
         ","
         Capture {
             OneOrMore(.digit)
+        } transform: {
+            Int($0)
         }
         ")"
     }
@@ -80,8 +84,8 @@ public enum Day3 {
             let matches = substring.matches(of: regex)
 
             let subtotal = matches.compactMap { match in
-                guard let lhs = Int(match.output.1),
-                      let rhs = Int(match.output.2)
+                guard let lhs = match.output.1,
+                      let rhs = match.output.2
                 else {
                     print("bad match")
                     return nil
@@ -89,7 +93,7 @@ public enum Day3 {
 
                 return lhs * rhs
             }
-                .reduce(0, +)
+            .reduce(0, +)
 
             total += subtotal
         }
